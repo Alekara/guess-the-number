@@ -7,33 +7,56 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="text">
-    <p class="question">
-      Загадайте целое число от 1 до 10000. Спорим, я угадаю его не более, чем за 14 попыток?
-    </p>
-    <p class="conditions">
-      Я буду называть варианты. Если загаданное число больше, чем моя догадка, нажмите "Больше". Если меньше - нажмите "Меньше". Если я угадала,
-       нажмите "В точку!"
-    </p>
+  <div class="container">
+   <section class="screen1">
+     <p class="question">
+       Загадайте целое число от 1 до 10000. Спорим, я угадаю его 14 попыток - или даже меньше?
+     </p>
+     <p class="conditions">
+       Правила просты. Я буду называть свои догадки. Если загаданное число больше, чем моя догадка, нажмите "Больше". Если меньше - нажмите "Меньше". Если я угадала, нажмите "В точку!"
+     </p>
+     <button class="btn btn__start">Поехали!</button>
+   </section>
+   
+   <section class="screen2 hide">
+     <p class="answer">
 
-
-    <p class="answer">
-
-    </p>
-
-
+     </p>
+     <div class="circle">
+       <div class="tryNumber">1</div>
+     </div>
+     <div class="buttons">
+       <button class="btn btn__less">Меньше</button>
+       <button class="btn btn__more">Больше</button>
+       <button class="btn btn__exact">В точку!</button>
+     </div>
+   </section>
+    
+    
   </div>
+<!--
+  <section class="screen">
+    <div class="text">
+      
 
-  <div class="main-field">
-    <div class="counter">
-      <div class="tryNumber"></div>
-      <button class="btn start">Поехали</button>
-      <button class="btn less">Меньше</button>
-      <button class="btn more">Больше</button>
-      <button class="btn exact">В точку!</button>
+
+      
+
+
     </div>
 
-  </div>
+    <div class="main-field">
+      <div class="counter">
+        
+        
+        
+        
+      </div>
+
+    </div> 
+  </section>
+-->
+  
 
 
 
@@ -42,7 +65,7 @@
 </html>
 
 
-<!-- 1. В центре больщой круг с кнопкой Поехали.
+<!-- 
 2. При нажатии кнопка исчезает, в круге появляется большой счетчик попыток. По сторонам от него три кнопки.
 3. Каждый раз при нажатии кнопки счетчик увеличивается с красивой анимацией: цифра увеличивается и тает, кнопки
 съезжаются с центру и возвращаются обратно, в центре возникает новая цифра (маленькая - большая - средняя).

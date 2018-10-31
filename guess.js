@@ -1,7 +1,9 @@
-var btnStart = document.querySelector(".start");
-var btnMore = document.querySelector(".more");
-var btnLess = document.querySelector(".less");
-var btnExact = document.querySelector(".exact");
+var btnStart = document.querySelector(".btn__start");
+var btnMore = document.querySelector(".btn__more");
+var btnLess = document.querySelector(".btn__less");
+var btnExact = document.querySelector(".btn__exact");
+var screen1 = document.querySelector(".screen1");
+var screen2 = document.querySelector(".screen2");
 
 var theAnswer = document.querySelector(".answer");
 
@@ -13,15 +15,14 @@ var lastLess = 10000;
 var counter = 1;
 
 btnStart.addEventListener("click", function () {
-  btnStart.classList.add("hide");
-	btnMore.classList.add("show");
-	btnLess.classList.add("show");
-	btnExact.classList.add("show");
-	theAnswer.textContent = "Попытка номер " + counter + ". Это число 5000?";
+  screen1.classList.add("hide");
+  screen2.classList.remove("hide");
+	
+	theAnswer.textContent = " Это число 5000?";
 });
 
 btnExact.addEventListener("click", function () {
-  theAnswer.textContent = "Видите, как я крута? =)";
+  theAnswer.textContent = "Вот видите! =)";
 });
 
 btnMore.addEventListener("click", checkMore);
@@ -31,8 +32,8 @@ function checkMore () {
   lastMore = theGuess;
 	theGuess = Math.round(lastMore + (lastLess - lastMore) / 2);
   counter += 1;
-  theCounter.textContent = "counter";
-  theAnswer.textContent = "Попытка номер " + counter + ". Это число " + theGuess + "?";
+  theCounter.textContent = counter;
+  theAnswer.textContent = " Это число " + theGuess + "?";
   if (counter > 14) {
     theAnswer.textContent = "Упс! Как это возможно? Вы точно где-то ошиблись...";
   }
@@ -43,7 +44,8 @@ function checkLess () {
   lastLess = theGuess;
 	theGuess = Math.round(lastMore + (lastLess - lastMore)/2);
   counter += 1;
-  theAnswer.textContent = "Попытка номер " + counter + ". Это число " + theGuess + "?";
+  theCounter.textContent = counter;
+  theAnswer.textContent = " Это число " + theGuess + "?";
   if (counter > 14) {
     theAnswer.textContent = "Упс! Как это возможно? Вы точно где-то ошиблись...";
   }
