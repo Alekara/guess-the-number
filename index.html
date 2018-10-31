@@ -1,74 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="container">
-   <section class="screen1">
-     <p class="question">
-       Загадайте целое число от 1 до 10000. Спорим, я угадаю его 14 попыток - или даже меньше?
-     </p>
-     <p class="conditions">
-       Правила просты. Я буду называть свои догадки. Если загаданное число больше, чем моя догадка, нажмите "Больше". Если меньше - нажмите "Меньше". Если я угадала, нажмите "В точку!"
-     </p>
-     <button class="btn btn__start">Поехали!</button>
-   </section>
-   
-   <section class="screen2 hide">
-     <p class="answer">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Number</title>
+  </head>
 
-     </p>
-     <div class="circle">
-       <div class="tryNumber">1</div>
-     </div>
-     <div class="buttons">
-       <button class="btn btn__less">Меньше</button>
-       <button class="btn btn__more">Больше</button>
-       <button class="btn btn__exact">В точку!</button>
-     </div>
-   </section>
-    
-    
-  </div>
-<!--
-  <section class="screen">
-    <div class="text">
-      
+  <body>
+    <div class="container">
+      <section class="screen1">
+        <p>
+          Загадайте целое число от 1 до 10000. Спорим, я угадаю его 14 попыток - или даже меньше?
+        </p>
+        <p>
+          Правила просты. Я буду называть свои догадки. Если загаданное число больше, чем моя догадка, нажмите "Больше". Если меньше - нажмите "Меньше". Если я угадала, нажмите "В точку!"
+        </p>
+        <button class="btn btn__start">Поехали!</button>
+      </section>
 
-
-      
-
-
+      <section class="screen2 hide">
+        <p class="answer"></p>
+        <div class="circle">
+          <div class="tryNumber">1</div>
+        </div>
+        <div class="buttons">
+          <button class="btn btn__less">Меньше</button>
+          <button class="btn btn__more">Больше</button>
+          <button class="btn btn__exact">В точку!</button>
+        </div>
+      </section>
     </div>
+    <script src="guess.js"></script>
+  </body>
 
-    <div class="main-field">
-      <div class="counter">
-        
-        
-        
-        
-      </div>
-
-    </div> 
-  </section>
--->
-  
-
-
-
-</body>
-<script src="guess.js"></script>
 </html>
-
-
-<!-- 
-2. При нажатии кнопка исчезает, в круге появляется большой счетчик попыток. По сторонам от него три кнопки.
-3. Каждый раз при нажатии кнопки счетчик увеличивается с красивой анимацией: цифра увеличивается и тает, кнопки
-съезжаются с центру и возвращаются обратно, в центре возникает новая цифра (маленькая - большая - средняя).
-4. Затем вверху появляется случайно генерируемая надпись в духе "Хм, дайте подумать..." Через несколько
-секунд она пропадает, на ее месте возникает новая догадка.
-5. После завершения игра предлагает угадать за 21 попытку уже число до 1 миллиона??? -->

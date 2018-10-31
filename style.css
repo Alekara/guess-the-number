@@ -11,16 +11,16 @@ body {
   background: url(bg.jpg) bottom center no-repeat;
   background-size: cover;
   color: #fff;
-  padding-top: 1px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .screen1 {
   width: 70%;
   padding: 40px;
-  margin: 200px auto 0;
-  background-color: rgba(121, 239, 237, 0.4);
   border-radius: 10px;
+  background-color: rgba(121, 239, 237, 0.4);  
 }
 
 .btn {
@@ -28,7 +28,7 @@ body {
   border: none;
   background: linear-gradient(to bottom right, #1e3c72, #2a5298);
   color: azure;
-  width: 200px;
+  width: 190px;
   padding: 30px;
   border-radius: 10px;
   font-size: inherit;
@@ -36,14 +36,17 @@ body {
   margin-bottom: 20px;
 }
 
-.btn:last-of-type:not(.btn__start) {
+.btn:hover {
+  background: linear-gradient(to bottom right, #314d81, #4066aa);
+}
+
+.btn__exact {
   margin-bottom: 0;
 }
 
-
 .btn__start {
+  width: 300px;
   margin: 40px auto 30px;
-
 }
 
 .screen2 {
@@ -53,18 +56,26 @@ body {
   align-items: center;
 }
 
+.answer {
+  width: 300px;
+  padding: 40px;
+  margin-right: 50px;
+  border-radius: 10px;
+  background-color: rgba(121, 239, 237, 0.4);
+  color: azure;  
+  font-size: 42px;
+}
+
 .circle {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(#ffd89b, #19547b);
-  position: relative;
   margin-right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
+  background: radial-gradient(#ffd89b, #19547b);  
   box-shadow: 0 0 10px #19547b;
-
 }
 
 .tryNumber {
@@ -73,83 +84,20 @@ body {
   font-weight: 700;
 }
 
-.answer {
-  width: 300px;
-  padding: 40px;
-  background-color: rgba(121, 239, 237, 0.4);
-  color: azure;
-  margin-right: 50px;
-  border-radius: 10px;
-  font-size: 42px;
-}
-
-
-
-/*
-.btn__less,
-.btn__more {
-  display: none;
-  top: 0;  
-
-}
-
-.btn__less {
-  left: 0;
-  
-
-}
-
-.btn__more {
-  right: 0;
-
-
-}
-
-
-
-
-
-.btn__exact {
-  display: none;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-*/
-
-.show {
-  display: inline-block;
-  position: absolute;
-}
-
 .hide {
   display: none;
 }
 
-/*
-.main-field {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: pink;
-}
-
-.counter {
+@media (max-width: 1024px) {
+  .screen2 {
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  
+  .answer {
+    width: 100%;
+    margin-bottom: 100px;
+    margin-left: 50px;
+  }
   
 }
-
-.text {
-  position: absolute;
-  top: 2%;
-  left: 0;
-}
-
-.answer {
-  color: #000;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-
-*/
