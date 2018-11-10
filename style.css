@@ -98,6 +98,9 @@ body {
     width: 100%;
     margin-bottom: 100px;
     margin-left: 50px;
-  }
+  }  
+}
+
+@media (max-width: 600px) {
   
 }
