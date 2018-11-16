@@ -19,7 +19,7 @@ body {
   align-items: center;
   background: url(bg.jpg) bottom center no-repeat;
   background-size: cover;
-  color: azure;
+  color: rgb(240, 255, 255);
 }
 
 .screen1 {
@@ -43,7 +43,7 @@ body {
   border: none;
   border-radius: 50%;
   background: linear-gradient(to bottom right, rgba(30, 60, 114, .8), rgb(42, 82, 152, .8));
-  color: azure;  
+  color: rgb(240, 255, 255);  
   box-shadow: 0 0 10px black;  
   font-size: 32px;
   font-family: inherit;
