@@ -3,9 +3,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Marck Script', cursive;
-}
-
-body {  
   font-size: 36px;
   line-height: 1.2;
   box-sizing: border-box;
@@ -17,12 +14,12 @@ body {
 
 .container {
   height: 100vh;
-  background: url(bg.jpg) bottom center no-repeat;
-  background-size: cover;
-  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(bg.jpg) bottom center no-repeat;
+  background-size: cover;
+  color: azure;
 }
 
 .screen1 {
@@ -30,21 +27,26 @@ body {
   padding: 40px;
 }
 
+.screen2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
-  display: block;
-  border: none;
-  background: linear-gradient(to bottom right, rgba(30, 60, 114, .8), rgb(42, 82, 152, .8));
-  color: azure;
   width: 150px;
   height: 150px;
   padding: 30px;
-  border-radius: 50%;
-  font-size: inherit;
-  box-shadow: 0 0 10px black;
   margin-bottom: 20px;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, rgba(30, 60, 114, .8), rgb(42, 82, 152, .8));
+  color: azure;  
+  box-shadow: 0 0 10px black;  
   font-size: 32px;
-/*  font-family: 'Pacifico', cursive;*/
-  font-family: 'Marck Script', cursive;
+  font-family: inherit;
 }
 
 .btn:hover,
@@ -74,19 +76,10 @@ body {
   display: none;
 }
 
-.screen2 {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .answer {
-  width: 300px;
+  width: 400px;
   padding: 30px;
   margin-right: 50px;
-  border-radius: 10px;
-  color: azure;  
   font-size: 60px;
   text-align: center;
 }
@@ -100,14 +93,13 @@ body {
   align-items: center;
   border-radius: 50%;
   background: radial-gradient(rgba(234, 226, 213, 0.8), rgba(12, 68, 105, 0.8));  
-  box-shadow: 0 0 10px #19547b;
+  box-shadow: 0 0 10px rgb(25, 84, 123);
 }
 
 .tryNumber {
-  color: #170c71;
-  font-size: 100px;
-  font-weight: 700;
-  
+  color: rgb(23, 12, 113);
+  font-size: 150px;
+  font-weight: 700;  
 }
 
 .hide {
@@ -129,14 +121,11 @@ body {
     width: 100%;
     margin-bottom: 50px;
     margin-right: 0;
-  }  
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 600px) {  
-  .body {
-    font-size: 22px;
-  }
-  
   .screen1 {
     width: 100%;
     font-size: 26px;
@@ -144,11 +133,22 @@ body {
   
   .screen2 {
     flex-direction: column;
+    flex-wrap: nowrap;
   }
   
   .answer {
-    margin-bottom: 50px;
+    margin-bottom: 50px;    
     font-size: 44px;
+  }
+  
+  .circle {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+  }
+
+  .tryNumber {
+    font-size: 120px; 
   }
   
   .buttons {
@@ -158,19 +158,12 @@ body {
   .btn {
     width: 100px;
     height: 100px;
-    padding: 20px;
-    font-size: 24px;
-  }
-  
-  .circle {
-    width: 230px;
-    height: 230px;
-    margin: 0 auto;
+    padding: 15px;
+    font-size: 22px;
   }
   
   .btn__start {
     width: 150px;
-    height: 150px;
     font-size: 28px;
   }
   
@@ -189,5 +182,9 @@ body {
     margin-bottom: 0;
     margin-left: 0;
     margin-top: -20px;
+  }
+  
+  .btn__again {
+    margin-top: 10px;
   }
 }
