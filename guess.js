@@ -2,6 +2,7 @@ var btnStart = document.querySelector(".btn__start");
 var btnMore = document.querySelector(".btn__more");
 var btnLess = document.querySelector(".btn__less");
 var btnExact = document.querySelector(".btn__exact");
+var btnAgain = document.querySelector(".btn__again");
 var screen1 = document.querySelector(".screen1");
 var screen2 = document.querySelector(".screen2");
 
@@ -16,13 +17,17 @@ var counter = 1;
 
 btnStart.addEventListener("click", function () {
   screen1.classList.add("hide");
-  screen2.classList.remove("hide");
-	
-	theAnswer.textContent = " Это число 5000?";
+  screen2.classList.remove("hide");	
+	theAnswer.textContent = "Это число 5000?";
 });
 
 btnExact.addEventListener("click", function () {
   theAnswer.textContent = "Вот видите! =)";
+  btnMore.style.display = "none";
+  btnLess.style.display = "none";
+  btnExact.style.display = "none";
+  btnAgain.style.display = "block";
+  btnAgain.addEventListener("click", reset);
 });
 
 btnMore.addEventListener("click", checkMore);
@@ -51,3 +56,17 @@ function checkLess () {
   }
   return counter;
 };
+  
+  function reset() {
+    screen1.classList.remove("hide");
+    screen2.classList.add("hide");
+    theGuess = 5000;
+    lastMore = 0;
+    lastLess = 10000;
+    counter = 1;
+    theCounter.textContent = counter;
+    btnMore.style.display = "block";
+    btnLess.style.display = "block";
+    btnExact.style.display = "block";
+    btnAgain.style.display = "none";
+  }
