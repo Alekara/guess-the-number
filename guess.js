@@ -23,11 +23,8 @@ btnStart.addEventListener("click", function () {
 
 btnExact.addEventListener("click", function () {
   theAnswer.textContent = "Вот видите! =)";
-  btnMore.style.display = "none";
-  btnLess.style.display = "none";
-  btnExact.style.display = "none";
-  btnAgain.style.display = "block";
-  btnAgain.addEventListener("click", reset);
+  resetButtons();
+  btnAgain.addEventListener("click", resetGame);
 });
 
 btnMore.addEventListener("click", checkMore);
@@ -41,6 +38,8 @@ function checkMore () {
   theAnswer.textContent = " Это число " + theGuess + "?";
   if (counter > 14) {
     theAnswer.textContent = "Упс! Как это возможно? Вы точно где-то ошиблись...";
+    resetButtons();
+    btnAgain.addEventListener("click", resetGame);
   }
   return counter;
 };
@@ -53,11 +52,13 @@ function checkLess () {
   theAnswer.textContent = " Это число " + theGuess + "?";
   if (counter > 14) {
     theAnswer.textContent = "Упс! Как это возможно? Вы точно где-то ошиблись...";
+    resetButtons();
+    btnAgain.addEventListener("click", resetGame);
   }
   return counter;
 };
   
-  function reset() {
+  function resetGame() {
     screen1.classList.remove("hide");
     screen2.classList.add("hide");
     theGuess = 5000;
@@ -70,3 +71,11 @@ function checkLess () {
     btnExact.style.display = "block";
     btnAgain.style.display = "none";
   }
+
+function resetButtons() {
+  btnMore.style.display = "none";
+  btnLess.style.display = "none";
+  btnExact.style.display = "none";
+  btnAgain.style.display = "block";
+}
+
