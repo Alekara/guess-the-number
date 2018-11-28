@@ -17,7 +17,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(bg.jpg) bottom center no-repeat;
+  background: url(bg.jpg) bottom center no-repeat, #000;
   background-size: cover;
   color: rgb(240, 255, 255);
 }
@@ -108,7 +108,7 @@ body {
 
 @media (max-width: 1024px) {  
   .container {
-    background: url(bg-tab.jpg) bottom center no-repeat;
+    background: url(bg-tab.jpg) bottom center no-repeat, #000;
     background-size: cover;
   }
   .screen1 {
@@ -138,22 +138,25 @@ body {
   
   .screen1 {
     width: 100%;
-    font-size: 22px;
+    padding: 20px;
+    font-size: 20px;
   }
   
   .screen2 {
+    height: auto;
     flex-direction: column;
     flex-wrap: nowrap;
   }
   
   .answer {
-    margin-bottom: 50px;    
-    font-size: 44px;
+    padding: 10px;
+    margin-bottom: 30px;    
+    font-size: 36px;
   }
   
   .circle {
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
     margin: 0 auto;
   }
 
